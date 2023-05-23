@@ -17,6 +17,9 @@ resource pipappgw 'Microsoft.Network/publicIPAddresses@2022-11-01' = {
   }
   properties: {
     publicIPAllocationMethod: 'Static'
+    dnsSettings: {
+      domainNameLabel: 'jk-demo-${name}'
+    }
   }
 }
 
